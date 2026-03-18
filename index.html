@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>週五食旅地圖 - 全方位完整版</title>
+    <style>
+        :root {
+            --primary-blue: #1A5276;
+            --accent-orange: #E67E22;
+            --bg-light: #F8F9FA;
+            --fixed-height: 250px; /* 統一固定圖片高度 */
+        }
+
+        body {
+            font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+            background-color: var(--bg-light);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            color: var(--primary-blue);
+            border-bottom: 3px solid var(--accent-orange);
+            display: inline-block;
+            margin: 40px 0 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .image-link {
+            display: block;
+            width: 100%;
+            height: var(--fixed-height);
+            overflow: hidden;
+            position: relative;
+            background-color: #f0f0f0;
+        }
+
+        .image-link::after {
+            content: "點擊查看完整菜單";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.5);
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            padding: 5px 0;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .image-link:hover::after {
+            opacity: 1;
+        }
+
+        .image-link img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+
+        .image-link:hover img {
+            transform: scale(1.1);
+        }
+
+        .content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .content h3 {
+            margin: 0 0 10px;
+            color: var(--primary-blue);
+            font-size: 1.2em;
+        }
+
+        .info {
+            font-size: 0.9em;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .btn-map {
+            display: block;
+            text-align: center;
+            background: #f1f1f1;
+            color: #333;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 0.9em;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .btn-map:hover {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Friday Wanderlust</h1>
+    <p>🍂 台南週五食旅地圖：安平 · 土城 · 漁光島 全方位導覽</p>
+</header>
+
+<div class="container">
+
+    <h2 class="section-title">📍 安平古堡區域</h2>
+    <div class="grid">
+        <div class="card">
+            <a href="c:\Users\王俊凱\Desktop\安平啞巴麵(江鎮麵館).jpg" target="_blank" class="image-link">
+                <img src="c:\Users\王俊凱\Desktop\安平啞巴麵(江鎮麵館).jpg" alt="安平啞巴麵">
+            </a>
+            <div class="content">
+                <h3>安平啞巴麵 (江鎮麵館)</h3>
+                <div class="info">🕒 週五 10:30–16:30<br>🚲 古堡騎車 2 分鐘</div>
+                <a href="https://share.google/x6vmgZWjqNgVbieJb" class="btn-map" target="_blank">📍 開啟導航</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="c:\Users\王俊凱\Desktop\四季奶茶.jpg" target="_blank" class="image-link">
+                <img src="c:\Users\王俊凱\Desktop\四季奶茶.jpg" alt="四季奶茶">
+            </a>
+            <div class="content">
+                <h3>四季奶茶</h3>
+                <div class="info">🕒 週五 11:00–18:00<br>🚲 古堡騎車 2 分鐘</div>
+                <a href="https://maps.app.goo.gl/FfzCyuoBVZLur4Ah6" class="btn-map" target="_blank">📍 開啟導航</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="c:\Users\王俊凱\Desktop\同記安平豆花-3.jpg" target="_blank" class="image-link">
+                <img src="c:\Users\王俊凱\Desktop\同記安平豆花-3.jpg" alt="同記安平豆花">
+            </a>
+            <div class="content">
+                <h3>同記安平豆花</h3>
+                <div class="info">🕒 週五 09:00–23:00<br>🚲 古堡騎車 2 分鐘</div>
+                <a href="https://share.google/0pKfLw2Y8BNYtnenm" class="btn-map" target="_blank">📍 開啟導航</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="c:\Users\王俊凱\Desktop\安平109雞肉飯.jpg" target="_blank" class="image-link">
+                <img src="c:\Users\王俊凱\Desktop\安平109雞肉飯.jpg" alt="安平109雞肉飯">
+            </a>
+            <div class="content">
+                <h3>安平 109 雞肉飯</h3>
+                <div class="info">🕒 週五 09:30–19:00<br>🚲 古堡騎車 2 分鐘</div>
+                <a href="https://share.google/84BA88pA7BReS9YKB" class="btn-map" target="_blank">📍 開啟導航</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="c:\Users\王俊凱\Desktop\王城迷你官財板.webp" target="_blank" class="image-link">
+                <img src="c:\Users\王俊凱\Desktop\王城迷你官財板.webp" alt="王城迷你官財板">
+            </a>
+            <div class="content">
+                <h3>王城迷你官財板</h3>
+                <div class="info">🕒 週五 11:00–18:00<br>🚲 古堡騎車 1 分鐘</div>
+                <a href="https://share.google/gzd6kBDj5UziXlYOC" class="btn-map" target="_blank">📍 開啟導航</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="c:\Users\王俊凱\Desktop\芙蓉食堂.webp" target="_blank" class="image-link">
+                <img src="c:\Users\王俊凱\Desktop\芙蓉食堂.webp" alt="芙蓉食堂">
+            </a>
+            <div class="content">
+                <h3>芙蓉食堂</h3>
+                <div class="info">🕒 週五 11:00–20:00<br>🚲 古堡騎車 2 分鐘</div>
+                <a href="https://share.google/lDhNPL7HuvBDyd6bM" class="btn-map" target="_blank">📍 開啟導航</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="c:\Users\王俊凱\Desktop\閒情逸致.jpg" target="_blank" class="image-link">
+                <img src="c:\Users\王俊凱\Desktop\閒情逸致.jpg" alt="閒情逸致">
+            </a>
+            <div class="content">
+                <h3>閒情逸致</h3>
+                <div class="info">🕒 週五 08:00–18:00<br>🚲 古堡騎車 2 分鐘</div>
+                <a href="https://www.google.com.tw/search?q=安平+閒情逸致" class="btn-map" target="_blank">📍 開啟導航</a>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="section-title">🏮 土城聖母廟區域 (美食與飲品)</h2>
+    <div class="grid">
+        <div class="card">
+            <a href="c:\Users\王俊凱\Desktop\陳記小吃.jpg" target="_blank" class="image-link">
+                <img src="c:\Users\王俊凱\Desktop\陳記小吃.jpg" alt="陳記小吃">
+            </a>
+            <div class="content">
+                <h3>陳記小吃 (藝銘軒)</h3>
+                <div class="info">🕒 週五 11:00–13:30, 17:00–19:30<br>🚲 聖母廟騎車 3 分鐘</div>
+                <a href="https://www.google.com.tw/search?q=%E9%99%B3%E8%A8%98%E5%B0%8F%E5%90%83" class="btn-map" target="_blank">📍 開啟導航</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="c:\Users\王俊凱\Desktop\台南土城蚵嗲.jpg" target="_blank" class="image-link">
+                <img src="c:\Users\王俊凱\Desktop\台南土城蚵嗲.jpg" alt="台南土城蚵嗲">
+            </a>
+            <div class="content">
+                <h3>台南土城蚵嗲</h3>
+                <div class="info">🕒 週五 09:00–18:30<br>🚲 聖母廟騎車 3 分鐘</div>
+                <a href="https://www.google.com.tw/search?q=台南土城蚵嗲" class="btn-map" target="_blank">📍 開啟導航</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="c:\Users\王俊凱\Desktop\茶客棧土城店.jpg" target="_blank" class="image-link">
+                <img src="c:\Users\王俊凱\Desktop\茶客棧土城店.jpg" alt="茶客棧菜單">
+            </a>
+            <div class="content">
+                <h3>茶客棧 (土城店)</h3>
+                <div class="info">🕒 週五 07:30–21:00<br>🚲 聖母廟騎車 2 分鐘</div>
+                <a href="https://share.google/Vf43vjEiv0N53nW31" class="btn-map" target="_blank">📍 開啟導航</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="c:\Users\王俊凱\Desktop\鹿橙冷飲 LU CHENG 土城總店.jpg" target="_blank" class="image-link">
+                <img src="c:\Users\王俊凱\Desktop\鹿橙冷飲 LU CHENG 土城總店.jpg" alt="鹿橙冷飲菜單">
+            </a>
+            <div class="content">
+                <h3>鹿橙冷飲 LU CHENG</h3>
+                <div class="info">🕒 週五 07:30–21:30<br>🚲 聖母廟騎車 2 分鐘</div>
+                <a href="https://share.google/e8A3OFdvPOcoPsWK9" class="btn-map" target="_blank">📍 開啟導航</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="c:\Users\王俊凱\Desktop\暮茗手作.jpg" target="_blank" class="image-link">
+                <img src="c:\Users\王俊凱\Desktop\暮茗手作.jpg" alt="暮茗手作菜單">
+            </a>
+            <div class="content">
+                <h3>暮茗手作 (安中門市)</h3>
+                <div class="info">🕒 週五 07:00–21:30<br>🚲 聖母廟騎車 3 分鐘</div>
+                <a href="https://www.google.com.tw/search?q=%E6%9A%AE%E8%8C%97%E6%89%8B%E4%BD%9C" class="btn-map" target="_blank">📍 開啟導航</a>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="section-title">🌊 漁光島區域</h2>
+    <div class="grid">
+        <div class="card">
+            <a href="c:\Users\王俊凱\Desktop\黃杯麵的蚵仔攤.jpg" target="_blank" class="image-link">
+                <img src="c:\Users\王俊凱\Desktop\黃杯麵的蚵仔攤.jpg" alt="黃杯麵的蚵仔攤">
+            </a>
+            <div class="content">
+                <h3>黃杯麵的蚵仔攤</h3>
+                <div class="info">🕒 週五 14:00–20:00<br>🍢 沙灘美食與小吃</div>
+                <a href="https://www.google.com.tw/search?q=漁光島+黃杯麵" class="btn-map" target="_blank">📍 開啟導航</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="c:\Users\王俊凱\Desktop\森山牛肉湯.jpg" target="_blank" class="image-link">
+                <img src="c:\Users\王俊凱\Desktop\森山牛肉湯.jpg" alt="森山牛肉湯">
+            </a>
+            <div class="content">
+                <h3>森山牛肉湯</h3>
+                <div class="info">🕒 週五 11:30–21:30<br>🥣 內用肉燥飯免費</div>
+                <a href="https://share.google/PBhVgjWkMsGCtP4yu" class="btn-map" target="_blank">📍 開啟導航</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer style="text-align: center; padding: 60px 20px; color: #bbb; font-size: 0.8em; background: #fff; margin-top: 50px;">
+    © 2026 Friday Wanderlust | 點選圖片看完整菜單 
+    <img src="c:\Users\王俊凱\Downloads\adobe-express-qr-code.png" alt="QR Code" width="150" height="150">
+</footer>
+
+</body>
+</html>
